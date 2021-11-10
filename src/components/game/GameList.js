@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect,useState } from "react"
 import { getGames } from "./GameManager.js"
 
 export const GameList = (props) => {
@@ -10,6 +10,7 @@ export const GameList = (props) => {
 
     return (
         <article className="games">
+            <h2>Current Games</h2>
             {
                 games.map(game => {
                     return <section key={`game--${game.id}`} className="game">
