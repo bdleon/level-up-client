@@ -9,7 +9,7 @@ export const getEvents = () => {
 }
 
 
-export const createEvent = ()=>{
+export const createEvent = (event)=>{
     return fetch("http://localhost:8000/events",{
         method:"POST",
         headers:{
@@ -17,7 +17,7 @@ export const createEvent = ()=>{
             "Content-Type": "application/json"
 
         },
-        body: JSON.stringify(game)
+        body: JSON.stringify(event)
     })
     
 }
