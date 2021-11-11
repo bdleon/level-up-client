@@ -7,6 +7,7 @@ export const GameForm = () => {
     const history = useHistory()
     const [gameTypes, setGameTypes] = useState([])
 
+
     /*
         Since the input fields are bound to the values of
         the properties of this state variable, you need to
@@ -22,7 +23,7 @@ export const GameForm = () => {
 
     useEffect(() => {
         // TODO: Get the game types, then set the state
-        getGameTypes().then(data=>setGameTypes(data))
+        getGameTypes().then(data => setGameTypes(data))
     }, [])
 
     /*
@@ -35,6 +36,9 @@ export const GameForm = () => {
 
         One hint: [event.target.name]
     */
+
+
+
     const changeGameTitleState = (event) => {
         const newGameState = { ...currentGame }
         newGameState.title = event.target.value
